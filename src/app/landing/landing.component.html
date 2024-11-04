@@ -38,7 +38,15 @@
     </div>
   </div>
 </section>
-<section id="features" style="height: 400px" class="bg-danger">
-  features here
+<section id="features" style="height: 400px" class="bg-body-secondary">
+  <span class="">features here</span>
 </section>
-<section id="topics" style="height: 400px" class="bg-info">topics here</section>
+<section id="topics" class="bg-body">
+  <h3 class="text-uppercase">Help Topics</h3>
+  <h2 class="text-capitalize">Enhance your lifestyle</h2>
+  <ul class="horizontal-media-scroller">
+    @for (item of topicArr; track $index) {
+    <app-card [topic]="item" :key="$index" />
+    }
+  </ul>
+</section>

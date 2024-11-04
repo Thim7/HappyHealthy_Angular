@@ -7,3 +7,30 @@
   height: auto;
   object-fit: cover;
 }
+
+#features {
+  display: grid;
+  place-content: center;
+}
+
+.horizontal-media-scroller {
+  --size: 150px;
+  --gap: 60px;
+
+  display: grid;
+  grid-auto-flow: column;
+  gap: calc(var(--gap) / 2);
+  margin: 0;
+
+  padding-inline-start: var(--gap/4);
+  padding-inline-end: var(--gap);
+  padding-block-start: calc(var(--gap) / 2);
+  padding-block-end: calc(var(--gap) / 2);
+
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+  scroll-padding-left: var(--gap);
+  scroll-padding-right: var(--gap);
+  scroll-padding-inline: var(--gap);
+}

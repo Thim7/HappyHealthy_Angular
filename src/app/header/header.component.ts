@@ -18,19 +18,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 })
 export class HeaderComponent {
   isOnTop: boolean = true;
-  // currentClasses: Record<string, boolean> = {};
-  // setCurrentClasses() {
-  //   this.currentClasses = {
-  //     'px-5': true,
-  //     'd-flex': true,
-  //     align-items-center: true,
-  //     justify-content-between: true,
-  //     py-4: true,
-  //     fixed-top: true,
-  //     z-3: true,
-  //     bg-transparent: this.isOnTop
-  //   };
-  // }
+
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event: Event): void {
     this.isOnTop = !(document.documentElement.scrollTop > 0);

@@ -1,0 +1,66 @@
+:root {
+  --gap: 60px;
+}
+
+li {
+  display: inline-block;
+  width: 20vw;
+  transition: ease-out 300ms;
+  /*  container padding fix  */
+  &:last-of-type figure {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+
+      inline-size: var(--gap);
+      block-size: 100%;
+
+      inset-block-start: 0;
+      inset-inline-end: calc(var(--gap) * -1);
+    }
+  }
+  &:hover {
+    scale: 1.1;
+    transition: ease-in 150ms;
+  }
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  outline-offset: 12px;
+
+  &:focus {
+    outline-offset: 7px;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition: outline-offset 0.25s ease;
+  }
+}
+figure {
+  scroll-snap-align: start;
+}
+
+picture {
+  height: 200px;
+}
+
+img {
+  inline-size: 100%;
+  block-size: 100%;
+  margin-block-end: 16px;
+
+  /* don't squish but do cover the space */
+  object-fit: cover;
+
+  /* soften the edges */
+  border-radius: 1ex;
+  overflow: hidden;
+
+  /* if empty, show a gradient placeholder */
+  background-image: linear-gradient(to bottom, hsl(0 0% 40%), hsl(0 0% 20%));
+}
