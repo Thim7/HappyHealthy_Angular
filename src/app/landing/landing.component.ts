@@ -1,15 +1,16 @@
-import { Component, Input } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 import { CardComponent } from '../card/card.component';
-
+import { DragScrollComponent } from 'ngx-drag-scroll';
 @Component({
   selector: 'app-landing',
   standalone: true,
-  imports: [NgOptimizedImage, CardComponent],
+  imports: [NgOptimizedImage, CardComponent, DragScrollComponent],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.css',
 })
 export class LandingComponent {
+  // @ViewChild('scroller', { read: DragScrollComponent }) ds: DragScrollComponent;
   topicArr = [
     {
       id: 1,
@@ -69,4 +70,16 @@ export class LandingComponent {
         'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et',
     },
   ];
+
+  // moveLeft() {
+  //   this.ds.moveLeft();
+  // }
+
+  // moveRight() {
+  //   this.ds.moveRight();
+  // }
+
+  // moveTo(index: number) {
+  //   this.ds.moveTo(index);
+  // }
 }

@@ -5,11 +5,15 @@
 li {
   display: inline-block;
   width: 20vw;
+  min-width: 160px;
   transition: ease-out 300ms;
+
+  margin-inline-end: calc(var(--gap) / 4);
+  scale: 0.9;
   /*  container padding fix  */
   &:last-of-type figure {
     position: relative;
-
+    margin-inline-end: 0;
     &::after {
       content: "";
       position: absolute;
@@ -22,7 +26,7 @@ li {
     }
   }
   &:hover {
-    scale: 1.1;
+    scale: 1;
     transition: ease-in 150ms;
   }
 }
