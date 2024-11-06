@@ -1,6 +1,6 @@
-<section id="aboveTheFold" style="height: 400px" class="vh-100">
+<section id="aboveTheFold" class="vh-100">
   <div class="row g-3 align-items-center">
-    <div class="col-7">
+    <div class="col-12 col-sm-7">
       <h1 class="text-break">
         <span class="text-info">One Step Solution</span> for all your dietary
         needs.
@@ -33,7 +33,7 @@
         </span>
       </div>
     </div>
-    <div class="col-5">
+    <div class="d-none d-sm-block col-sm-5">
       <img id="hero-img" src="/assets/hero-img.png" alt="hero image" />
     </div>
   </div>
@@ -44,12 +44,10 @@
 <section id="topics" class="bg-body">
   <h3 class="text-uppercase">Help Topics</h3>
   <h2 class="text-capitalize">Enhance your lifestyle</h2>
-  <!-- <button (click)="moveLeft()">Left</button>
-  <button (click)="moveRight()">Right</button>
-  <button (click)="moveTo(2)">Last</button> -->
-  <drag-scroll class="horizontal-media-scroller" #scroller>
+
+  <ul class="horizontal-media-scroller" #scroller>
     @for (item of topicArr; track $index) {
     <app-card [topic]="item" :key="$index" />
     }
-  </drag-scroll>
+  </ul>
 </section>
