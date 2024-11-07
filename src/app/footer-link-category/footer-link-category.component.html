@@ -1,0 +1,10 @@
+<h6>{{ category.titleCategory }}</h6>
+<ul class="d-flex flex-column row-gap-2 ps-0">
+  @for (link of category.links; track $index) {
+  <li class="list-unstyled">
+    <a class="text-decoration-none text-body" [href]="link.href">{{
+      link.title_link
+    }}</a>
+  </li>
+  }
+</ul>
