@@ -14,6 +14,7 @@ export class FooterLinkCategoryComponent {
       {
         title_link: '',
         href: '',
+        icon: '',
       },
     ],
   };

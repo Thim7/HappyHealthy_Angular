@@ -1,0 +1,42 @@
+button {
+  position: relative;
+  overflow: hidden;
+
+  max-width: 40px;
+  width: 2.5rem;
+  max-height: 40px;
+  height: 2.5rem;
+
+  vertical-align: middle;
+  text-align: center;
+
+  border-radius: 0.5rem;
+  border: none;
+
+  background-color: transparent;
+  background-image: none;
+  -moz-user-select: none;
+  user-select: none;
+
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
+
+  &:hover {
+    background-color: rgba(33, 33, 33, 0.1);
+  }
+  &:disabled {
+  }
+}
+
+a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+img {
+  width: 24px;
+  height: 24px;
+}

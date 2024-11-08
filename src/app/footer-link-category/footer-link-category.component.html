@@ -2,9 +2,20 @@
 <ul class="d-flex flex-column row-gap-2 ps-0">
   @for (link of category.links; track $index) {
   <li class="list-unstyled">
-    <a class="text-decoration-none text-body" [href]="link.href">{{
-      link.title_link
-    }}</a>
+    <div class="d-inline-flex align-items-center">
+      @if (link.icon){
+      <img
+        src="{{ link.icon }}"
+        width="24px"
+        height="24px"
+        alt=""
+        class="me-2"
+      />
+      }
+      <a class="text-decoration-none text-body" [href]="link.href">{{
+        link.title_link
+      }}</a>
+    </div>
   </li>
   }
 </ul>

@@ -1,13 +1,18 @@
 <footer class="container-fluid mt-5 pt-5 px-sm-5 bg-body-tertiary rounded-top">
-  <div class="row mx-0">
-    <div class="d-flex flex-column row-gap-3 col-12 col-sm-3">
+  <div class="row mx-0 gap-4">
+    <div class="d-flex flex-column row-gap-3 col-12 col-sm-4">
       <a href="/">
         <img id="logo" src="/assets/Logo.png" alt="logo" />
       </a>
       <p>Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam</p>
+      <div class="row">
+        @for (item of iconLinkArr; track $index) {
+        <app-icon-button [iconLink]="item" class="col-1" />
+        }
+      </div>
     </div>
     <hr class="d-sm-none border-top border-black my-4 overflow-hidden" />
-    <div class="col-12 col-sm-9 bg-body-tertiary row">
+    <div class="col-12 col-sm-8 bg-body-tertiary row">
       @for (category of footerLinkCategoryArr; track category.titleCategory) {
       <div class="col-6 col-sm d-flex flex-column row-gap-3">
         <app-footer-link-category [category]="category" />
